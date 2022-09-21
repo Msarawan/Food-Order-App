@@ -1,5 +1,4 @@
-//import App from './App';
- import Header from './components/Layout/header/Header';
+import Header from '../../header/Header';
 import React from "react";
 import { mount } from "enzyme";
 
