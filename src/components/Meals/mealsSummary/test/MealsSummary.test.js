@@ -19,4 +19,7 @@ describe("Food Order aap testing", () => {
   test("render the discription", () => {
     expect(wrapper.find(".summary").text()).toContain("All our meals are cooked with high-quality ingredients, just-in-time and of course by experienced chefs!")});
 
+  test('renders a snapshot', () => {
+      expect(wrapper).toMatchSnapshot();
+    });
 });
