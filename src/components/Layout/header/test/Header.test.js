@@ -17,11 +17,6 @@ describe("Food Order app testing", () => {
     console.log(wrapper.find('Header').props())
   });
 
-  // test("render the initial value of state in a div", () => {
-  //   expect(wrapper.find("#counter-value").text()).toBe("0");
-  // });
-
-
   test('renders a snapshot', () => {
     expect(wrapper).toMatchSnapshot();
   });

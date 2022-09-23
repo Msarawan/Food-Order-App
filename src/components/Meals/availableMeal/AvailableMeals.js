@@ -40,7 +40,6 @@ const AvailableMeals = () => {
  />
   ));
 
-
   return (
     <section className={classes.meals}>
       <Card>
