@@ -1,3 +1,3 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Food Order app testing renders a snapshot 1`] = `ReactWrapper {}`;
+exports[`Food Order app testing render the childrens of the props 1`] = `ReactWrapper {}`;

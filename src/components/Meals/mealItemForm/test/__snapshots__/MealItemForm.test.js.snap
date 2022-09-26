@@ -1,3 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Food Order app testing button click should hide component 1`] = `[MockFunction]`;
+
 exports[`Food Order app testing renders a snapshot 1`] = `ReactWrapper {}`;
