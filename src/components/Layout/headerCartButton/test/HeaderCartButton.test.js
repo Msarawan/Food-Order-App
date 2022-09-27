@@ -1,12 +1,11 @@
-/* eslint-disable no-undef */
 import React from 'react';
 import HeaderCartButton from "../../headerCartButton/HeaderCartButton";
-import { mount } from "enzyme";
+import {mount} from "enzyme";
 
 describe("Food Order app testing", () => {
   let wrapper;
   beforeEach(() => {
-   wrapper = mount(<HeaderCartButton/>);
+   wrapper = mount(<HeaderCartButton />);
   });
 
   test("render the cart name", () => {
