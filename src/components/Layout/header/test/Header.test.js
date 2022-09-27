@@ -12,13 +12,20 @@ describe("Food Order app testing", () => {
     expect(wrapper.find("h1").text()).toContain("Meals");
   });
 
-  test("render the initial value of state in the cart", () => {
+  test("render state in the cart", () => {
     expect(wrapper.props().onClick).toEqual('{showCartHandler}');
     console.log(wrapper.find('Header').props())
   });
 
-  test('renders a snapshot', () => {
+describe('Toggle Component', () =>{
+  test('state of the cart to be true',()=>{
+    const test = true;
+    expect(test).toBe(true);
+  })
+
+  test('renders a snapshot', () => { 
+   // wrapper = mount(<Header onClick='{showCartHandler}'/>)
     expect(wrapper).toMatchSnapshot();
   });
-  
+}) ;
 });

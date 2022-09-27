@@ -33,7 +33,6 @@ const Cart = (props) => {
           onAdd={cartItemAddHandler.bind(null, item)}
         />
       ))}
-
 </ul>
   );
 
