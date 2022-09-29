@@ -30,12 +30,16 @@ import React from "react";
  describe("Food Order app testing", () => {
   let wrapper;
   beforeEach(() => {
-    wrapper = mount(<Modal/>);
+    wrapper = mount(<Modal onClose='{hideCartHandler}'/>);
   });
 
   test("render the close button", () => {
     expect(wrapper.find(".button--alt").text()).toContain("Close");
   });
+
+  // test('render the hideCartHandler function',() =>{
+  //   expect(wrapper.props().onClose).toEqual('{hideCartHandler}')
+  // })
 
   test('renders a snapshot', () => {
     expect(wrapper).toMatchSnapshot();
