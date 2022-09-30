@@ -17,10 +17,6 @@ import {
      const body = global.document.querySelector('body');
      body.appendChild(modalRoot);
 
-    // afterEach(() => {
-    //   wrapper.unmount();
-    // });
-
     test('should render the modal wrapper', () => {
       wrapper = mount(
         <Modal/>

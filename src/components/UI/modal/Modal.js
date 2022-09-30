@@ -1,5 +1,4 @@
-import React,{ Fragment, useEffect } from 'react';
-import ReactDOM from 'react-dom';
+import React,{ Fragment} from 'react';
 import classes from './Modal.module.css';
 
 const Backdrop = (props) => {
@@ -19,15 +18,8 @@ const portalElement = document.getElementById('overlays');
 const modalElement = document.createElement('div');
 
   // appends the modal to portal once modal's children are mounted and 
-  // removes it once we don't need it in the DOM anymore:
- 
+  
 const Modal = (props) => {
- /*  useEffect(() => {
-    portalElement.appendChild(modalElement);
-    return () => {
-      portalElement.removeChild(modalElement);
-    };
-  }, [modalElement]); */
   return (
     <Fragment>
       {<div>ReactDOM.createPortal(<Backdrop onClose={props.onClose} />, portalElement)</div>}
