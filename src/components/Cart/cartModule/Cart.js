@@ -1,14 +1,13 @@
-import { useContext } from 'react';
-
+// { useContext } from 'react';
 import Modal from '../../UI/modal/Modal';
 import CartItem from '../cartItem/CartItem';
 import classes from './Cart.module.css';
-import CartContext from '../../../store/CartContext';
-// import { CartCtx } from '../../../store/CartContext';
+//import CartContext from '../../../store/CartContext';
+import { CartCtx } from '../../../store/CartContext';
 
 const Cart = (props) => {
-
-  const cartCtx = useContext(CartContext);
+  //const cartCtx = useContext(CartContext);
+  const cartCtx = CartCtx();
   const totalAmount = `$${cartCtx.totalAmount?.toFixed(2)}`;
 
   const cartItemRemoveHandler = (id) => {
@@ -20,7 +19,8 @@ const Cart = (props) => {
 };
    
  console.log(cartCtx.items);
-  const cartItems = (
+
+const cartItems = (
     <ul className={classes['cart-items']}>
  {cartCtx.items?.map((item) => (
         <CartItem
@@ -33,7 +33,7 @@ const Cart = (props) => {
         />
       ))}
 </ul>
-  );
+);
 
   return (
     <Modal onClose={props.onClose} >

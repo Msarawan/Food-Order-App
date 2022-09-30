@@ -1,28 +1,3 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`mock the component renders a snapshot 1`] = `
-<Modal>
-  <ul
-    className="cart-items"
-  />
-  <div
-    className="total"
-  >
-    <span>
-      Total Amount
-    </span>
-    <span>
-      $0.00
-    </span>
-  </div>
-  <div
-    className="actions"
-  >
-    <button
-      className="button--alt"
-    >
-      Close
-    </button>
-  </div>
-</Modal>
-`;
+exports[` 1`] = `undefined`;

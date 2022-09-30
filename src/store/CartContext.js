@@ -7,6 +7,6 @@ const CartContext = React.createContext({
   removeItem: (id) => {}
 });
 
-export const CartCtx = () => useContext({CartContext})
+export const CartCtx = () => useContext(CartContext);
 
 export default CartContext;
