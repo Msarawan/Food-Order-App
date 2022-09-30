@@ -24,7 +24,6 @@ describe('Toggle Component', () =>{
   })
 
   test('renders a snapshot', () => { 
-   // wrapper = mount(<Header onClick='{showCartHandler}'/>)
     expect(wrapper).toMatchSnapshot();
   });
 }) ;
