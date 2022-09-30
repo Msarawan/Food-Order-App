@@ -1,5 +1,42 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[` 1`] = `undefined`;
+
+exports[` 2`] = `
+<button
+  className="button"
+  onClick={
+    [MockFunction] {
+      "calls": Array [
+        Array [],
+      ],
+      "results": Array [
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+      ],
+    }
+  }
+>
+  <span
+    className="icon"
+  >
+    <CartIcon />
+  </span>
+  <span
+    className="name"
+  >
+    Your Cart
+  </span>
+  <span
+    className="badge"
+  >
+    0
+  </span>
+</button>
+`;
+
 exports[`Food Order app testing renders a snapshot 1`] = `
 <HeaderCartButton>
   <button
