@@ -36,3 +36,5 @@ exports[`Food Order app testing render the childrens of the props 1`] = `
   />
 </Card>
 `;
+
+exports[`the card data is correct 1`] = `[Function]`;

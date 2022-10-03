@@ -24,7 +24,6 @@ describe('render a button on onclick event' , () =>{
   //const fn = jest.fn()
   element.simulate('click')
   expect(showCartHandler).toHaveBeenCalledTimes(1)
- // console.log(showCartHandler);
+  //console.log(showCartHandler);
  expect(wrapper).toMatchSnapshot();
-
 })

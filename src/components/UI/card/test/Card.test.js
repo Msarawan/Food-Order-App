@@ -1,4 +1,5 @@
 import Card from "../../card/Card";
+//import AvailableMeals from "../../../Meals/availableMeal/AvailableMeals";
 import React from "react";
 import { mount} from "enzyme";
 
@@ -35,6 +36,9 @@ describe("Food Order app testing", () => {
 
       wrapper = mount(<Card item ={mealsList}/>);
       expect(wrapper).toMatchSnapshot();
-      console.log(wrapper.find('Card'))
+      expect(mealsList).toHaveLength(4);
+     console.log(wrapper.find('Card'))
   });
 })
+
+

@@ -10,9 +10,9 @@ describe("Food Order app testing", () => {
   });
 
   test("render the Add button", () => {
-     expect(wrapper.find('button').text()).toContain('+ Add');})
+     expect(wrapper.find('button').text()).toContain('+ Add')})
 
-  test("add the quantity by clicking add button", () => {
+  test("Add the items by clicking the add button", () => {
     expect(wrapper.props().onClick).toEqual('{addToCartHandler}');
       console.log(wrapper.find('MealItemForm'))
    });
