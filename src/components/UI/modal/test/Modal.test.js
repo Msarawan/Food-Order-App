@@ -3,10 +3,7 @@ import React from "react";
  import { createPortal } from "react-dom";
  import { mount} from "enzyme";
  import ReactDOM from 'react-dom';
-import {
- Backdrop,
-   ModalOverlay,
- } from '../../modal/Modal';
+import { Backdrop,  ModalOverlay,} from '../../modal/Modal';
  
 
  describe('Modal component', () => {
