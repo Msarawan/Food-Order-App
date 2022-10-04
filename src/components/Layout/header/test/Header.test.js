@@ -2,6 +2,9 @@ import Header from '../../header/Header';
 import React from "react";
 import { mount } from "enzyme";
 
+
+jest.mock('../../headerCartButton/HeaderCartButton');
+
 describe("Food Order app testing", () => {
   let wrapper;
   beforeEach(() => {
@@ -15,6 +18,7 @@ describe("Food Order app testing", () => {
   test("render state in the cart", () => {
     expect(wrapper.props().onClick).toEqual('{showCartHandler}');
     console.log(wrapper.find('Header').props())
+    expect(wrapper).toMatchSnapshot();
   });
 
 describe('Toggle Component', () =>{
@@ -22,9 +26,6 @@ describe('Toggle Component', () =>{
     const test = true;
     expect(test).toBe(true);
   })
-
-  test('renders a snapshot', () => { 
-    expect(wrapper).toMatchSnapshot();
-  });
 }) ;
+
 });
