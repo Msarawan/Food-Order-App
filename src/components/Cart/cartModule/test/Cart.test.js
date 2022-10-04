@@ -2,11 +2,20 @@
  import {shallow} from 'enzyme';
  import   * as CartContext from '../../../../store/CartContext';
  import Cart from "../../cartModule/Cart";
-//import HeaderCartButton from '../../../Layout/headerCartButton/HeaderCartButton';
 
 
-describe('mock the component', () => {
-  let wrapper;
+// jest.mock("../../cartItem/CartItem", () => () => {
+//    const MockName = "default-cartItem-component-mock";
+//    return <MockName />;
+//  });
+
+
+jest.mock('../../cartItem/CartItem');
+jest.mock('../../../UI/modal/Modal');
+
+
+ describe('mock the component', () => {
+ let wrapper;
  test('it should mock the context', () => {
      
   const cartCtx = {
@@ -24,11 +33,10 @@ describe('mock the component', () => {
       .spyOn(CartContext, 'CartCtx')
       .mockImplementation(() =>(cartCtx));
        wrapper = shallow(<Cart/>);
-      console.log(wrapper.debug());
+       console.log(wrapper.debug());
        //console.log(cartCtx.items);
-
+  
+       expect(wrapper).toMatchSnapshot(); 
 });
-
-   expect(wrapper).toMatchSnapshot()
-
+  
 });

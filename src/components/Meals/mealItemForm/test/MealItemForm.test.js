@@ -3,6 +3,8 @@ import React from "react";
 import {mount} from "enzyme";
 
 
+jest.mock('../../../UI/input/Input');
+
 describe("Food Order app testing", () => {
   let wrapper;
   beforeEach(() => {
@@ -19,9 +21,9 @@ describe("Food Order app testing", () => {
 
   test("render sumbit handler", () => {
     expect(wrapper.props().onSubmit).toEqual('{submitHandler}');
+    //expect(wrapper).toMatchSnapshot();
   });
+  
+  expect(wrapper).toMatchSnapshot();
 
-  test('renders a snapshot', () => {
-    expect(wrapper).toMatchSnapshot();
-  }); 
 })
