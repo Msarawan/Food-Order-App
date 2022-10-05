@@ -15,7 +15,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "coverage": "npm run test -- --coverage"
   },
   "eslintConfig": {
     "extends": [
@@ -43,9 +44,9 @@
     "enzyme-adapter-react-16": "^1.15.6",
     "jest": "^29.0.3"
   },
-
   "jest": {
-    "snapshotSerializers": ["enzyme-to-json/serializer"]
+    "snapshotSerializers": [
+      "<rootDir>/home/msarawan/FrontEnd_Training/Food-Order-App/enzyme-to-json/serializer"
+    ]
   }
-  
 }
