@@ -1,7 +1,8 @@
-import 'jsdom-global/register';
+//import 'jsdom-global/register';
 import React from "react";
  import Modal from "../../modal/Modal"
  import { createPortal } from "react-dom";
+ //import '@testing-library/jest-dom'
  import { mount} from "enzyme";
  import ReactDOM from 'react-dom';
 import { Backdrop,  ModalOverlay,} from '../../modal/Modal';

@@ -1,4 +1,4 @@
-import 'jsdom-global/register';
+//import 'jsdom-global/register';
 import React from 'react';
 import HeaderCartButton from "../../headerCartButton/HeaderCartButton";
 //import Adapter from 'enzyme-adapter-react-16';
