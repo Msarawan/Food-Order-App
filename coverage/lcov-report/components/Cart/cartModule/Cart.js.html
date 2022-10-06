@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">9.09% </span>
+                <span class="strong">63.63% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>1/11</span>
+                <span class='fraction'>7/11</span>
             </div>
         
             
@@ -37,16 +37,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">25% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/4</span>
+                <span class='fraction'>1/4</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">9.09% </span>
+                <span class="strong">63.63% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>1/11</span>
+                <span class='fraction'>7/11</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line medium'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -127,21 +127,21 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -180,23 +180,23 @@ import classes from './Cart.module.css';
 //import CartContext from '../../../store/CartContext';
 import { CartCtx } from '../../../store/CartContext';
 &nbsp;
-const Cart = <span class="fstat-no" title="function not covered" >(p</span>rops) =&gt; {
+const Cart = (props) =&gt; {
   //const cartCtx = useContext(CartContext);
-  const cartCtx = <span class="cstat-no" title="statement not covered" >CartCtx();</span>
-  const totalAmount = <span class="cstat-no" title="statement not covered" >`$${cartCtx.totalAmount?.toFixed(2)}`;</span>
+  const cartCtx = CartCtx();
+  const totalAmount = `$${cartCtx.totalAmount?.toFixed(2)}`;
 &nbsp;
-  const cartItemRemoveHandler = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >(i</span>d) =&gt; {</span>
+  const cartItemRemoveHandler = <span class="fstat-no" title="function not covered" >(i</span>d) =&gt; {
 <span class="cstat-no" title="statement not covered" >    cartCtx.removeItem(id);</span>
   };
 &nbsp;
-  const cartItemAddHandler = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >(i</span>tem) =&gt; {</span>
+  const cartItemAddHandler = <span class="fstat-no" title="function not covered" >(i</span>tem) =&gt; {
 <span class="cstat-no" title="statement not covered" >    cartCtx.addItem({ ...item, amount: 1 });</span>
 };
    
-<span class="cstat-no" title="statement not covered" > console.log(cartCtx.items);</span>
+ console.log(cartCtx.items);
 &nbsp;
 const cartItems = (
-<span class="cstat-no" title="statement not covered" >    &lt;ul className={classes['cart-items']}&gt;</span>
+    &lt;ul className={classes['cart-items']}&gt;
  {cartCtx.items?.map(<span class="fstat-no" title="function not covered" >(i</span>tem) =&gt; (
 <span class="cstat-no" title="statement not covered" >        &lt;CartItem</span>
           key={item.id}
@@ -235,7 +235,7 @@ export default Cart;</pre></td></tr></table></pre>
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2022-10-06T15:21:23.999Z
+                at 2022-10-06T19:02:01.208Z
             </div>
         <script src="../../../prettify.js"></script>
         <script>
