@@ -1,3 +1,4 @@
+import 'jsdom-global/register';
 import React from "react";
  import Modal from "../../modal/Modal"
  import { createPortal } from "react-dom";

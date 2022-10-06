@@ -1,3 +1,4 @@
+import 'jsdom-global/register';
 import MealItemForm from "../../mealItemForm/MealItemForm"
 import React from "react";
 import {mount} from "enzyme";
