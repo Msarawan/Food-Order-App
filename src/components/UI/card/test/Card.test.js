@@ -1,6 +1,8 @@
+import 'jsdom-global/register';
 import Card from "../../card/Card";
 //import AvailableMeals from "../../../Meals/availableMeal/AvailableMeals";
 import React from "react";
+import Adapter from 'enzyme-adapter-react-16';
 import { mount} from "enzyme";
 
 describe("Food Order app testing", () => {

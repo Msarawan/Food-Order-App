@@ -1,5 +1,7 @@
+import 'jsdom-global/register';
 import React from 'react';
 import HeaderCartButton from "../../headerCartButton/HeaderCartButton";
+//import Adapter from 'enzyme-adapter-react-16';
 import {mount,shallow} from "enzyme";
 
 describe("Food Order app testing", () => {
