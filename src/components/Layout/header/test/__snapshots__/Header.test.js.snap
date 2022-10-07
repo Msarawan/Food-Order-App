@@ -17,7 +17,7 @@ exports[`Food Order app testing render state in the cart 1`] = `
   >
     <img
       alt="A table full of delicious food!"
-      src="meals.jpg"
+      src=""
     />
   </div>
 </Header>
