@@ -1,7 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[` 1`] = `undefined`;
-
 exports[`mock the component it should mock the context 1`] = `
 <MockedModal>
   <ul

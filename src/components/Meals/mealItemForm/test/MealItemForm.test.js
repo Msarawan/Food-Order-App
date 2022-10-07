@@ -22,7 +22,7 @@ describe("Food Order app testing", () => {
 
   test("render sumbit handler", () => {
     expect(wrapper.props().onSubmit).toEqual('{submitHandler}');
-    //expect(wrapper).toMatchSnapshot();
+   
   });
   
   expect(wrapper).toMatchSnapshot();
