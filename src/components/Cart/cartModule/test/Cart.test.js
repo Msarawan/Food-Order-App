@@ -36,7 +36,14 @@ jest.mock('../../../UI/modal/Modal');
        console.log(wrapper.debug());
        //console.log(cartCtx.items);
   
-       expect(wrapper).toMatchSnapshot(); 
+    expect(wrapper).toMatchSnapshot(); 
+
+   // const cartItemRemoveHandler = jest.fn();
+   // const  cartItemAddHandler  = jest.fn();
+   
+   // expect(cartItemRemoveHandler).toMatchSnapshot();
+   // expect(cartItemAddHandler).toMatchSnapshot();
+
 });
   
 });
