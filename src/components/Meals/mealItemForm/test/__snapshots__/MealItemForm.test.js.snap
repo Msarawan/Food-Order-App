@@ -1,14 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[` 1`] = `undefined`;
-
-exports[` 2`] = `[MockFunction]`;
-
-exports[`Food Order app testing render event preventDefault 1`] = `[MockFunction]`;
-
-exports[`Food Order app testing render sumbit handler 1`] = `
+exports[`Food Order app testing does not reload page after submition 1`] = `
 <MealItemForm
-  onSubmit="{submitHandler}"
+  onAddToCart={[MockFunction]}
 >
   <form
     className="form"

@@ -3,13 +3,6 @@
  import   * as CartContext from '../../../../store/CartContext';
  import Cart from "../../cartModule/Cart";
 
-
-// jest.mock("../../cartItem/CartItem", () => () => {
-//    const MockName = "default-cartItem-component-mock";
-//    return <MockName />;
-//  });
-
-
 jest.mock('../../cartItem/CartItem');
 jest.mock('../../../UI/modal/Modal');
 
@@ -38,11 +31,6 @@ jest.mock('../../../UI/modal/Modal');
   
     expect(wrapper).toMatchSnapshot(); 
 
-   // const cartItemRemoveHandler = jest.fn();
-   // const  cartItemAddHandler  = jest.fn();
-   
-   // expect(cartItemRemoveHandler).toMatchSnapshot();
-   // expect(cartItemAddHandler).toMatchSnapshot();
 
 });
   
