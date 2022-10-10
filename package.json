@@ -12,6 +12,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "jest",
+    "test:update" : "npm run test -- -u",
     "eject": "react-scripts eject", 
     "test:coverage": "rimraf coverage && npm run test -- --coverage"
   },

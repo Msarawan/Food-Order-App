@@ -40,7 +40,3 @@ exports[`mock the component it should mock the context 1`] = `
   </div>
 </MockedModal>
 `;
-
-exports[`mock the component it should mock the context 2`] = `[MockFunction]`;
-
-exports[`mock the component it should mock the context 3`] = `[MockFunction]`;
