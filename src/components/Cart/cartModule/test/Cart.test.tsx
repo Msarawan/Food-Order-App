@@ -1,7 +1,7 @@
  import React from 'react';
  import {shallow} from 'enzyme';
  import   * as CartContext from '../../../../store/CartContext';
- import Cart from "../../cartModule/Cart";
+ import Cart from "../Cart";
 
 jest.mock('../../cartItem/CartItem');
 jest.mock('../../../UI/modal/Modal');

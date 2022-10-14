@@ -1,3 +1,4 @@
+import * as React from 'react';
 import { useContext } from 'react';
 import CartIcon from '../../Cart/carticon/CartIcon';
 import CartContext from '../../../store/CartContext';
