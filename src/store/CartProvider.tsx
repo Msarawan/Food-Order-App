@@ -1,3 +1,4 @@
+import * as React from 'react';
 import { useReducer } from 'react';
 
 import CartContext from './CartContext';
