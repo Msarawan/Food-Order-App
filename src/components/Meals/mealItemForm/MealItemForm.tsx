@@ -1,14 +1,22 @@
+import * as React from 'react';
 import { useRef, useState } from 'react';
 import Input from '../../UI/input/Input';
 import classes from './MealItemForm.module.css';
 
-const MealItemForm = (props) => {
-  const [amountIsValid, setAmountIsValid] = useState(true);
-  const amountInputRef = useRef();
 
-  const submitHandler = (event) => {
+interface Props{
+  onAddToCart(enteredAmountNumber: number): unknown,
+  id: string,
+}
+
+const MealItemForm = (props:Props) => {
+  const [amountIsValid, setAmountIsValid] = useState(true);
+  const amountInputRef=useRef()
+
+  const submitHandler = (event:any) => {
     event.preventDefault();
 
+   // const enteredAmount = amountInputRef.current.value;
     const enteredAmount = amountInputRef.current.value;
     const enteredAmountNumber = +enteredAmount;
     
@@ -29,7 +37,7 @@ const MealItemForm = (props) => {
     <form className={classes.form}  onSubmit={submitHandler}>
       <Input
        ref={amountInputRef}
-        label='Amount'
+        label ='Amount'
         input={{
           id: 'amount_' + props.id,
           type: 'number',

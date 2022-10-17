@@ -4,11 +4,15 @@ import CartIcon from '../../Cart/carticon/CartIcon';
 import CartContext from '../../../store/CartContext';
 import classes from './HeaderCartButton.module.css';
 
-const HeaderCartButton = (props) => {
+
+interface Props {
+  onClick:any
+}
+const HeaderCartButton = (props:Props) => {
   const cartCtx = useContext(CartContext);
 
   const numberOfCartItems = cartCtx.items.reduce((curNumber, item) => {
-    return curNumber + item.amount;
+    return curNumber + item['amount'];
   }, 0);
 
   return (

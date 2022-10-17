@@ -5,7 +5,7 @@ import HeaderCartButton from '../headerCartButton/HeaderCartButton';
 import mealsImage from '../../../assets/meals.jpg';
 import classes from './Header.module.css';
 
-const Header = (props) => {
+const Header = (props:any) => {
 
   return (
     <Fragment>

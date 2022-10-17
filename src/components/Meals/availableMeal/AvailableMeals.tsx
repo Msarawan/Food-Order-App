@@ -1,3 +1,4 @@
+import * as React from 'react';
 import Card from '../../UI/card/Card'
 import MealItem from '../MealItem/MealItem';
 import classes from './AvailableMeals.module.css';

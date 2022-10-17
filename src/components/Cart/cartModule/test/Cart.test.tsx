@@ -1,4 +1,4 @@
- import React from 'react';
+import * as React from 'react';
  import {shallow} from 'enzyme';
  import   * as CartContext from '../../../../store/CartContext';
  import Cart from "../Cart";
@@ -8,10 +8,10 @@ jest.mock('../../../UI/modal/Modal');
 
 
  describe('mock the component', () => {
- let wrapper;
+ let wrapper:any;
  test('it should mock the context', () => {
      
-  const cartCtx = {
+  const cartCtx:any = {
      items:[{
        id : 1,
        amount:4,
@@ -25,7 +25,7 @@ jest.mock('../../../UI/modal/Modal');
    jest
       .spyOn(CartContext, 'CartCtx')
       .mockImplementation(() =>(cartCtx));
-       wrapper = shallow(<Cart/>);
+       wrapper = shallow(<Cart onClose={undefined}/>);
        console.log(wrapper.debug());
        //console.log(cartCtx.items);
   
