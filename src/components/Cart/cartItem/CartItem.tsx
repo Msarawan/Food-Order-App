@@ -1,7 +1,18 @@
 import * as React from 'react';
 import classes from './CartItem.module.css';
+//import React, {cartItemRemoveHandler} from 'react';
 
-const CartItem = (props) => {
+
+interface Props {
+ price : number,
+ name : string,
+ amount : number,
+ onRemove :()=> void,
+ onAdd:()=> void
+}
+
+
+const CartItem = (props:Props) => {
  const price = `$${props.price.toFixed(2)}`;
 
   return (

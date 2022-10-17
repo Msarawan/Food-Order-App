@@ -1,4 +1,4 @@
-import MealItemForm from "../../mealItemForm/MealItemForm";
+import MealItemForm from "../MealItemForm";
 import React from "react";
 import {mount} from "enzyme";
 
@@ -7,13 +7,15 @@ jest.mock('../../../UI/input/Input');
 
 describe("Food Order app testing", () => {
   
-  let wrapper;
+  let wrapper:any;
   beforeEach(() => {
     wrapper = mount(<MealItemForm onSubmit='{submitHandler}' onClick='{addToCartHandler}' />);
   });
 
   test("renders correctly", () =>{
-    wrapper=mount(<MealItemForm/>)
+    wrapper=mount(<MealItemForm onAddToCart={function (enteredAmountNumber: number): unknown {
+      throw new Error("Function not implemented.");
+    } } id={""}/>)
   })
 
   test("render the Add button", () => {
@@ -31,7 +33,7 @@ describe("Food Order app testing", () => {
  test('does not reload page after submition', () => { 
   jest.spyOn(React, 'useRef').mockReturnValueOnce({current:{value:'2'}});
   const props = {onAddToCart:jest.fn()}
-  wrapper = mount(<MealItemForm {...props}/>);
+  wrapper = mount(<MealItemForm id={""} {...props}/>);
   expect(wrapper).toMatchSnapshot();
 
 

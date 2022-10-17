@@ -1,10 +1,10 @@
 //import 'jsdom-global/register';
 import React from "react";
-import MealSummary from "../../mealsSummary/MealsSummary"
+import MealSummary from "../MealsSummary"
 import { mount } from "enzyme";
 
 describe("Food Order aap testing", () => {
-  let wrapper;
+  let wrapper:any;
   beforeEach(() => {
     wrapper = mount(<MealSummary/>);
   });

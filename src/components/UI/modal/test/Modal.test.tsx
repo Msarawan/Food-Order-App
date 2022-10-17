@@ -1,15 +1,15 @@
 //import 'jsdom-global/register';
 import React from "react";
- import Modal from "../../modal/Modal"
- import { createPortal } from "react-dom";
+ import Modal from "../Modal"
+ //import { createPortal } from "react-dom";
  //import '@testing-library/jest-dom'
  import { mount} from "enzyme";
  import ReactDOM from 'react-dom';
-import { Backdrop,  ModalOverlay,} from '../../modal/Modal';
+//import { Backdrop,  ModalOverlay,} from '../Modal';
  
 
  describe('Modal component', () => {
-  let wrapper;
+  let wrapper:any;
 
     const modalRoot = global.document.createElement('div');
      modalRoot.setAttribute('id', 'overlays');
@@ -18,7 +18,7 @@ import { Backdrop,  ModalOverlay,} from '../../modal/Modal';
 
     test('should render the modal wrapper', () => {
       wrapper = mount(
-        <Modal/>
+        <Modal onClose={undefined} children={undefined}/>
      );   
        expect(modalRoot.hasChildNodes()).toBeFalsy();
        expect(wrapper.find("Backdrop").exists()).toBeTruthy();
