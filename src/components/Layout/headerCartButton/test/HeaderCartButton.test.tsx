@@ -1,13 +1,13 @@
 //import 'jsdom-global/register';
 import React from 'react';
-import HeaderCartButton from "../../headerCartButton/HeaderCartButton";
+import HeaderCartButton from "../HeaderCartButton";
 //import Adapter from 'enzyme-adapter-react-16';
 import {mount,shallow} from "enzyme";
 
 describe("Food Order app testing", () => {
-  let wrapper;
+  let wrapper: any;
   beforeEach(() => {
-   wrapper = mount(<HeaderCartButton/>);
+   wrapper = mount(<HeaderCartButton onClick={undefined}/>);
   });
 
   test("render the cart name", () => {

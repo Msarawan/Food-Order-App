@@ -5,10 +5,10 @@ import CartContext from '../../../store/CartContext';
 import classes from './HeaderCartButton.module.css';
 
 
-interface Props {
+interface IHeaderCartButtonProps {
   onClick:any
 }
-const HeaderCartButton = (props:Props) => {
+const HeaderCartButton: React.FC<IHeaderCartButtonProps> = ({onClick}) => {
   const cartCtx = useContext(CartContext);
 
   const numberOfCartItems = cartCtx.items.reduce((curNumber, item) => {
@@ -16,7 +16,7 @@ const HeaderCartButton = (props:Props) => {
   }, 0);
 
   return (
-    <button className={classes.button}  onClick={props.onClick}>
+    <button className={classes.button}  onClick={onClick}>
       <span className={classes.icon}>
         <CartIcon />
       </span>

@@ -6,7 +6,11 @@ import classes from './Cart.module.css';
 import { CartCtx } from '../../../store/CartContext';
 
 
-const Cart = (props: { onClose: React.MouseEventHandler<HTMLButtonElement> | undefined; }) => {
+interface ICartProps{
+   onClose:()=>void
+}
+
+const Cart: React.FC<ICartProps> = ({onClose}) => {
   //const cartCtx = useContext(CartContext);
   const cartCtx = CartCtx();
   const totalAmount = `$${cartCtx.totalAmount?.toFixed(2)}`;
@@ -37,14 +41,14 @@ const cartItems = (
 );
 
   return (
-    <Modal onClose={props.onClose} >
+    <Modal onClose={onClose} >
       {cartItems}
       <div className={classes.total}>
         <span>Total Amount</span>
         <span>{totalAmount}</span>
       </div>
       <div className={classes.actions}>
-        <button className={classes['button--alt']}  onClick={props.onClose}>
+        <button className={classes['button--alt']}  onClick={onClose}>
             Close
         </button>
         {(cartCtx.items?.length > 0) && <button className={classes.button}>Order</button>}

@@ -25,7 +25,9 @@ jest.mock('../../../UI/modal/Modal');
    jest
       .spyOn(CartContext, 'CartCtx')
       .mockImplementation(() =>(cartCtx));
-       wrapper = shallow(<Cart onClose={undefined}/>);
+       wrapper = shallow(<Cart onClose={function (): void {
+          throw new Error('Function not implemented.');
+       } }/>);
        console.log(wrapper.debug());
        //console.log(cartCtx.items);
   

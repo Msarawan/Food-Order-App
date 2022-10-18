@@ -2,12 +2,12 @@ import * as React from 'react';
 import classes from './Card.module.css';
 
 
-interface Props{
+interface ICardProps{
   children:any
 }
 
-const Card = (props:Props) => {
-  return <div className={classes.card}>{props.children}</div>
+const Card: React.FC<ICardProps> = ({children}) => {
+  return <div className={classes.card}>{children}</div>
 };
 
 export default Card;
