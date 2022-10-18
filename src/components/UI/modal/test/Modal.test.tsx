@@ -1,4 +1,3 @@
-//import 'jsdom-global/register';
 import React from "react";
  import Modal from "../Modal"
  //import { createPortal } from "react-dom";
@@ -14,11 +13,13 @@ import React from "react";
     const modalRoot = global.document.createElement('div');
      modalRoot.setAttribute('id', 'overlays');
      const body = global.document.querySelector('body');
-     body.appendChild(modalRoot);
+     body?.appendChild(modalRoot);
 
     test('should render the modal wrapper', () => {
       wrapper = mount(
-        <Modal onClose={undefined} children={undefined}/>
+        <Modal onClose={function (): void {
+          throw new Error("Function not implemented.");
+        } } children={undefined}/>
      );   
        expect(modalRoot.hasChildNodes()).toBeFalsy();
        expect(wrapper.find("Backdrop").exists()).toBeTruthy();

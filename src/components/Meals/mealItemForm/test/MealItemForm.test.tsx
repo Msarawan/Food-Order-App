@@ -9,13 +9,15 @@ describe("Food Order app testing", () => {
   
   let wrapper:any;
   beforeEach(() => {
-    wrapper = mount(<MealItemForm onSubmit='{submitHandler}' onClick='{addToCartHandler}' />);
+    wrapper = mount(<MealItemForm onAddToCart={function (enteredAmountNumber: number): unknown {
+      throw new Error("Function not implemented.");
+    } } id={""} />);
   });
 
   test("renders correctly", () =>{
     wrapper=mount(<MealItemForm onAddToCart={function (enteredAmountNumber: number): unknown {
-      throw new Error("Function not implemented.");
-    } } id={""}/>)
+        throw new Error("Function not implemented.");
+      } } id={""} />);
   })
 
   test("render the Add button", () => {

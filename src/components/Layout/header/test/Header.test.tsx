@@ -1,14 +1,15 @@
-import Header from '../../header/Header';
 import React from "react";
+import Header from '../Header';
 import { mount } from "enzyme";
 
 
 jest.mock('../../headerCartButton/HeaderCartButton');
 
 describe("Food Order app testing", () => {
-  let wrapper;
+  let wrapper:any;
   beforeEach(() => {
-    wrapper = mount(<Header onClick='{showCartHandler}'/>);
+    wrapper = mount(<Header onShowCart={function (): void {}
+     } />);
   });
 
   test("render the title of the app", () => {

@@ -1,7 +1,5 @@
-//import 'jsdom-global/register';
-import Card from "../Card";
-//import AvailableMeals from "../../../Meals/availableMeal/AvailableMeals";
 import React from "react";
+import Card from "../Card";
 //import Adapter from 'enzyme-adapter-react-16';
 import { mount} from "enzyme";
 
@@ -37,7 +35,7 @@ describe("Food Order app testing", () => {
       ];
 
       
-      wrapper = mount(<Card item ={mealsList}/>);
+      wrapper = mount(<Card children={undefined}/>);
       expect(wrapper).toMatchSnapshot();
       expect(mealsList).toHaveLength(4);
      console.log(wrapper.find('Card'))
