@@ -1,9 +1,7 @@
 import React from "react";
- import Modal from "../Modal"
- //import { createPortal } from "react-dom";
- //import '@testing-library/jest-dom'
- import { mount} from "enzyme";
- import ReactDOM from 'react-dom';
+import Modal from "../Modal";
+import { mount} from "enzyme";
+import ReactDOM from 'react-dom';
 //import { Backdrop,  ModalOverlay,} from '../Modal';
  
 

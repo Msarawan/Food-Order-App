@@ -4,17 +4,25 @@ import MealItemForm from '../mealItemForm/MealItemForm';
 import classes from './MealItem.module.css';
 import CartContext from '../../../store/CartContext';
 
-const MealItem = (props:any) => {
+
+interface IMealItemProps{
+id:string,
+name:string,
+price:number,
+description:string
+}
+const MealItem: React.FC<IMealItemProps> = ({id,name,price:mealPrice,description}) => {
   const cartCtx = useContext(CartContext);
 
-  const price = `$${props.price.toFixed(2)}`;
+  const price = mealPrice.toFixed(2);
+  console.log(price)
 
   const addToCartHandler = (amount:any) => {
     cartCtx.addItem({
-      id: props.id,
-      name: props.name,
+      id: id,
+      name: name,
       amount: amount,
-      price: props.price,
+      price: price,
     });
   };
  
@@ -22,12 +30,12 @@ const MealItem = (props:any) => {
   return (
     <li className={classes.meal}>
       <div>
-        <h3>{props.name}</h3>
-        <div className={classes.description}>{props.description}</div>
+        <h3>{name}</h3>
+        <div className={classes.description}>{description}</div>
         <div className={classes.price}>{price}</div>
       </div>
       <div>
-      <MealItemForm id={props.id} onAddToCart={addToCartHandler}/>
+      <MealItemForm id={id} onAddToCart={addToCartHandler}/>
       </div>
     </li>
   );
