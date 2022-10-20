@@ -16,9 +16,9 @@ describe("Food Order app testing", () => {
 
   test("renders correctly", () =>{
     wrapper=mount(<MealItemForm onAddToCart={function (enteredAmountNumber: number): unknown {
-        throw new Error("Function not implemented.");
-      } } id={""} />);
-  })
+      throw new Error("Function not implemented.");
+    } } id={""} />)})
+     
 
   test("render the Add button", () => {
      expect(wrapper.find('button').text()).toContain('+ Add')})
