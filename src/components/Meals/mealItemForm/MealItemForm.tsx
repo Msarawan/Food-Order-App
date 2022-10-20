@@ -27,7 +27,6 @@ const MealItemForm: React.FC<IMealItemFormProps> = ({onAddToCart,id})=> {
       setAmountIsValid(false);
       return;
     }
-
     onAddToCart(enteredAmountNumber);
   };
 

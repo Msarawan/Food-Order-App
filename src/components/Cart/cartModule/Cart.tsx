@@ -13,7 +13,9 @@ interface ICartProps{
 const Cart: React.FC<ICartProps> = ({onClose}) => {
   //const cartCtx = useContext(CartContext);
   const cartCtx = CartCtx();
-  const totalAmount = `$${cartCtx.totalAmount?.toFixed(2)}`;
+  console.log(cartCtx.totalAmount)
+  const totalAmount = `$${cartCtx.totalAmount.toFixed(2)}`;
+  console.log(totalAmount)
 
   const cartItemRemoveHandler = (id:string) => {
     cartCtx.removeItem(id);

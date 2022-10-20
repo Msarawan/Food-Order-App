@@ -3,8 +3,8 @@ import classes from './CartItem.module.css';
 //import React, {cartItemRemoveHandler} from 'react';
 
 
-interface Props {
- price : number,
+interface ICartItemProps {
+ price : string,
  name : string,
  amount : number,
  onRemove :()=> void,
@@ -12,21 +12,22 @@ interface Props {
 }
 
 
-const CartItem = (props:Props) => {
- const price = `$${props.price.toFixed(2)}`;
+const CartItem :React.FC<ICartItemProps>= ({price:mealPrice,name,amount,onRemove,onAdd}) => {
+const price = mealPrice;
+console.log(mealPrice)
 
   return (
     <li className={classes['cart-item']}>
       <div>
-        <h2>{props.name}</h2>
+        <h2>{name}</h2>
         <div className={classes.summary}>
-          <span className={classes.price}>{price}</span>
-          <span className={classes.amount}>x {props.amount}</span>
+          <span className={classes.price}>${price}</span>
+          <span className={classes.amount}>x {amount}</span>
         </div>
       </div>
       <div className={classes.actions}>
-      <button onClick={props.onRemove}>−</button>
-        <button onClick={props.onAdd}>+</button>
+      <button onClick={onRemove}>−</button>
+        <button onClick={onAdd}>+</button>
       </div>
     </li>
   );

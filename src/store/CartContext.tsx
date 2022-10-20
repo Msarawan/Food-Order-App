@@ -8,5 +8,4 @@ const CartContext = React.createContext({
 });
 
 export const CartCtx = () => useContext(CartContext);
-
 export default CartContext;
