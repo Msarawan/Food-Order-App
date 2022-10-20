@@ -1,5 +1,5 @@
 //import 'jsdom-global/register';
-import React from "react";
+//import React from "react";
 import MealSummary from "../MealsSummary"
 import { mount } from "enzyme";
 
