@@ -75,7 +75,7 @@
     "setupFilesAfterEnv": [
       "./src/setupTests.js"
     ],
-    "transformIgnorePatterns": [],
+    "transformIgnorePatterns": ["node_modules"],
     "moduleFileExtensions": [
       "jsx",
       "js",
@@ -84,7 +84,7 @@
     ],
     "preset": "ts-jest",
     "transform": {
-      "\\.[jt]sx?$":"ts-jest"
+      "^.+\\.tsx?$": "ts-jest"
     },
     "projects": [
       {
