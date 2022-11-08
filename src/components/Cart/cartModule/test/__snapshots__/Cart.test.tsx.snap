@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`mock the component it should mock the context 1`] = `
+<MockedModal
+  onClose={[Function]}
+>
+  <ul
+    className="cart-items"
+  >
+    <MockedCartItem
+      amount={4}
+      key="1"
+      name="aloo kulcha"
+      onAdd={[Function]}
+      onRemove={[Function]}
+      price={18.48}
+    />
+  </ul>
+  <div
+    className="total"
+  >
+    <span>
+      Total Amount
+    </span>
+    <span>
+      $18.45
+    </span>
+  </div>
+  <div
+    className="actions"
+  >
+    <button
+      className="button--alt"
+      onClick={[Function]}
+    >
+      Close
+    </button>
+    <button
+      className="button"
+    >
+      Order
+    </button>
+  </div>
+</MockedModal>
+`;

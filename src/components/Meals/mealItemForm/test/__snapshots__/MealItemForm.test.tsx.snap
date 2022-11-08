@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Food Order app testing does not reload page after submition 1`] = `
+<MealItemForm
+  id=""
+  onAddToCart={[MockFunction]}
+>
+  <form
+    className="form"
+    onSubmit={[Function]}
+  >
+    <MockedInput
+      input={
+        {
+          "defaultValue": "1",
+          "id": "amount_",
+          "max": "5",
+          "min": "1",
+          "step": "1",
+          "type": "number",
+        }
+      }
+      label="Amount"
+    />
+    <button>
+      + Add
+    </button>
+  </form>
+</MealItemForm>
+`;
