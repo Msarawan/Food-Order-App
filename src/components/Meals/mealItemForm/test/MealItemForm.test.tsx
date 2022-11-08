@@ -14,25 +14,16 @@ describe("Food Order app testing", () => {
     } } id={""} />);
   });
 
-  test("renders correctly", () =>{
+ test("renders correctly", () =>{
     wrapper=mount(<MealItemForm onAddToCart={function (enteredAmountNumber: number): unknown {
       throw new Error("Function not implemented.");
-    } } id={""} />)})
+    } } id={""}/>)})
      
 
   test("render the Add button", () => {
      expect(wrapper.find('button').text()).toContain('+ Add')})
 
-  test("Add the items by clicking the add button", () => {
-    expect(wrapper.props().onClick).toEqual('{addToCartHandler}');
-      console.log(wrapper.find('MealItemForm'))
-   });
-
-  test("render sumbit handler", () => {
-    expect(wrapper.props().onSubmit).toEqual('{submitHandler}');
-  })
-
- test('does not reload page after submition', () => { 
+  test('does not reload page after submition', () => { 
   jest.spyOn(React, 'useRef').mockReturnValueOnce({current:{value:'2'}});
   const props = {onAddToCart:jest.fn()}
   wrapper = mount(<MealItemForm id={""} {...props}/>);

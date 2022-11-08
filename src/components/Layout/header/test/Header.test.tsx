@@ -16,17 +16,15 @@ describe("Food Order app testing", () => {
     expect(wrapper.find("h1").text()).toContain("Meals");
   });
 
-  test("render state in the cart", () => {
-    expect(wrapper.props().onClick).toEqual('{showCartHandler}');
-    console.log(wrapper.find('Header').props())
-    expect(wrapper).toMatchSnapshot();
-  });
-
-describe('Toggle Component', () =>{
+ describe('Toggle Component', () =>{
   test('state of the cart to be true',()=>{
     const test = true;
     expect(test).toBe(true);
   })
-}) ;
+});
+
+test('renders a snapshot', () => {
+  expect(wrapper).toMatchSnapshot();
+});
 
 });
