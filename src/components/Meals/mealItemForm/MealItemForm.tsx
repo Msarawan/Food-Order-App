@@ -6,7 +6,7 @@ import classes from './MealItemForm.module.css';
 
 interface IMealItemFormProps{
   onAddToCart(enteredAmountNumber: number): unknown,
-  id: string,
+  id: string
 }
 
 const MealItemForm: React.FC<IMealItemFormProps> = ({onAddToCart,id})=> {
