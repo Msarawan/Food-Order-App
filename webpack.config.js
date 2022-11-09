@@ -40,7 +40,9 @@ module.exports = {
     extensions: [".js", ".jsx", ".json", ".ts", ".tsx"],
   },
   plugins: [
-    new HtmlWebpackPlugin(),
+    new HtmlWebpackPlugin({
+      template:"./public/index.html"
+    }),
     new CleanWebpackPlugin()
   ]
 
